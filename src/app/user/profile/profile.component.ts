@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from '../../models/User';
 import {TokenStorageService} from '../../service/token-storage.service';
-import {PostService} from '../../service/post.service';
+import {PostApi} from '../../auth/api-client/post.api';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {NotificationService} from '../../service/notification.service';
-import {ImageUploadService} from '../../service/image-upload.service';
-import {UserService} from '../../service/user.service';
+import {ImageUploadApi} from '../../auth/api-client/image-upload.api';
+import {UserApi} from '../../auth/api-client/user.api';
 import {EditUserComponent} from '../edit-user/edit-user.component';
 
 @Component({
@@ -22,11 +22,11 @@ export class ProfileComponent implements OnInit {
   previewImgURL: any;
 
   constructor(private tokenService: TokenStorageService,
-              private postService: PostService,
+              private postService: PostApi,
               private dialog: MatDialog,
               private notificationService: NotificationService,
-              private imageService: ImageUploadService,
-              private userService: UserService) {
+              private imageService: ImageUploadApi,
+              private userService: UserApi) {
   }
 
   ngOnInit(): void {

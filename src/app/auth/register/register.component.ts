@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {AuthService} from '../../service/auth.service';
-import {TokenStorageService} from '../../service/token-storage.service';
+import {AuthApi} from '../api-client/auth.api';
 import {NotificationService} from '../../service/notification.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -14,9 +14,10 @@ export class RegisterComponent implements OnInit {
   public registerForm: FormGroup;
 
   constructor(
-    private authService: AuthService,
+    private authService: AuthApi,
     private notificationService: NotificationService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {
   }
 
@@ -48,6 +49,7 @@ export class RegisterComponent implements OnInit {
     }).subscribe(data => {
       console.log(data);
       this.notificationService.showSnackBar('Successfully Registered!');
+      this.router.navigate(['/login']);
     }, error => {
       this.notificationService.showSnackBar('Something went wrong during registration');
     });

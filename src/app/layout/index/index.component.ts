@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Post} from '../../models/Post';
 import {User} from '../../models/User';
-import {PostService} from '../../service/post.service';
-import {UserService} from '../../service/user.service';
-import {CommentService} from '../../service/comment.service';
+import {PostApi} from '../../auth/api-client/post.api';
+import {UserApi} from '../../auth/api-client/user.api';
+import {CommentApi} from '../../auth/api-client/comment.api';
 import {NotificationService} from '../../service/notification.service';
-import {ImageUploadService} from '../../service/image-upload.service';
+import {ImageUploadApi} from '../../auth/api-client/image-upload.api';
 
 @Component({
   selector: 'app-index',
@@ -19,11 +19,11 @@ export class IndexComponent implements OnInit {
   isUserDataLoaded = false;
   user: User;
 
-  constructor(private postService: PostService,
-    private userService: UserService,
-    private commentService: CommentService,
+  constructor(private postService: PostApi,
+    private userService: UserApi,
+    private commentService: CommentApi,
     private notificationService: NotificationService,
-    private imageService: ImageUploadService
+    private imageService: ImageUploadApi
   ) { }
 
   ngOnInit(): void {

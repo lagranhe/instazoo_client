@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {GlobalVariable} from '../../global';
 
-const USER_API = 'http://localhost:8080/api/user/';
+const USER_API = `${GlobalVariable.ROOT_URL}api/user/`;
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class UserApi {
 
   constructor(private http: HttpClient) { }
 
   getUserById(id: number): Observable<any> {
-    return this.http.get(USER_API + id);
+    return this.http.get(`${USER_API}${id}`);
   }
 
   getCurrentUser(): Observable<any> {
@@ -20,6 +21,6 @@ export class UserService {
   }
 
   updateUser(user: any): Observable<any> {
-    return this.http.post(USER_API + 'update', user);
+    return this.http.post(`${USER_API}update`, user);
   }
 }

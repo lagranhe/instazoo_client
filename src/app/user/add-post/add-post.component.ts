@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Post} from '../../models/Post';
-import {PostService} from '../../service/post.service';
-import {ImageUploadService} from '../../service/image-upload.service';
+import {PostApi} from '../../auth/api-client/post.api';
+import {ImageUploadApi} from '../../auth/api-client/image-upload.api';
 import {NotificationService} from '../../service/notification.service';
 import {Router} from '@angular/router';
 
@@ -19,8 +19,8 @@ export class AddPostComponent implements OnInit {
   createdPost: Post;
   previewImgURL: any;
 
-  constructor(private postService: PostService,
-              private imageUploadService: ImageUploadService,
+  constructor(private postService: PostApi,
+              private imageUploadService: ImageUploadApi,
               private notificationService: NotificationService,
               private router: Router,
               private fb: FormBuilder) {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../../models/User';
 import {TokenStorageService} from '../../service/token-storage.service';
-import {UserService} from '../../service/user.service';
+import {UserApi} from '../../auth/api-client/user.api';
 import {Router} from '@angular/router';
 
 @Component({
@@ -16,7 +16,7 @@ export class NavigationComponent implements OnInit {
   user: User;
 
   constructor(private tokenService: TokenStorageService,
-              private userService: UserService,
+              private userService: UserApi,
               private router: Router) { }
 
   ngOnInit(): void {

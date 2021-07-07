@@ -1,13 +1,14 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {GlobalVariable} from '../../global';
 
-const COMMENT_API = 'http://localhost:8080/api/comment/';
+const COMMENT_API = `${GlobalVariable.ROOT_URL}api/comment/`;
 
 @Injectable({
   providedIn: 'root'
 })
-export class CommentService {
+export class CommentApi {
 
   constructor(private http: HttpClient) {
   }

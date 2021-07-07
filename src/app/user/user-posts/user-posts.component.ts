@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Post} from '../../models/Post';
-import {PostService} from '../../service/post.service';
-import {ImageUploadService} from '../../service/image-upload.service';
-import {CommentService} from '../../service/comment.service';
+import {PostApi} from '../../auth/api-client/post.api';
+import {ImageUploadApi} from '../../auth/api-client/image-upload.api';
+import {CommentApi} from '../../auth/api-client/comment.api';
 import {NotificationService} from '../../service/notification.service';
 
 @Component({
@@ -15,9 +15,9 @@ export class UserPostsComponent implements OnInit {
   isUserPostsLoaded = false;
   posts: Post [];
 
-  constructor(private postService: PostService,
-              private imageService: ImageUploadService,
-              private commentService: CommentService,
+  constructor(private postService: PostApi,
+              private imageService: ImageUploadApi,
+              private commentService: CommentApi,
               private notificationService: NotificationService) {
   }
 

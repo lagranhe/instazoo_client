@@ -3,8 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
-  serverUrl: "http://localhost:8080/instazoo-0.0.1-SNAPSHOT/"
+  production: false,
 };
 
 /*

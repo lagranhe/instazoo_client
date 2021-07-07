@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {AuthService} from '../../service/auth.service';
+import {AuthApi} from '../api-client/auth.api';
 import {TokenStorageService} from '../../service/token-storage.service';
 import {Router} from '@angular/router';
 import {NotificationService} from '../../service/notification.service';
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
 
   constructor(
-    private authService: AuthService,
+    private authService: AuthApi,
     private tokenStorage: TokenStorageService,
     private notificationService: NotificationService,
     private router: Router,

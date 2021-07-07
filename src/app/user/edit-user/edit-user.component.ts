@@ -2,7 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {NotificationService} from '../../service/notification.service';
-import {UserService} from '../../service/user.service';
+import {UserApi} from '../../auth/api-client/user.api';
 import {User} from '../../models/User';
 
 @Component({
@@ -18,7 +18,7 @@ export class EditUserComponent implements OnInit {
               private fb: FormBuilder,
               private notificationService: NotificationService,
               @Inject(MAT_DIALOG_DATA) public data,
-              private userService: UserService) {
+              private userService: UserApi) {
   }
 
   ngOnInit(): void {
