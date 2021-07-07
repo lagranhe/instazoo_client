@@ -2,7 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {NotificationService} from '../../service/notification.service';
-import {UserApi} from '../../auth/api-client/user.api';
+import {UserApi} from '../../api-client/user.api';
 import {User} from '../../models/User';
 
 @Component({

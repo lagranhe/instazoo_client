@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from '../../models/User';
 import {TokenStorageService} from '../../service/token-storage.service';
-import {PostApi} from '../../auth/api-client/post.api';
+import {PostApi} from '../../api-client/post.api';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {NotificationService} from '../../service/notification.service';
-import {ImageUploadApi} from '../../auth/api-client/image-upload.api';
-import {UserApi} from '../../auth/api-client/user.api';
+import {ImageUploadApi} from '../../api-client/image-upload.api';
+import {UserApi} from '../../api-client/user.api';
 import {EditUserComponent} from '../edit-user/edit-user.component';
 
 @Component({

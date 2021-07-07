@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Post} from '../../models/Post';
-import {PostApi} from '../../auth/api-client/post.api';
-import {ImageUploadApi} from '../../auth/api-client/image-upload.api';
+import {PostApi} from '../../api-client/post.api';
+import {ImageUploadApi} from '../../api-client/image-upload.api';
 import {NotificationService} from '../../service/notification.service';
 import {Router} from '@angular/router';
 

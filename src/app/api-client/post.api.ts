@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Post} from '../../models/Post';
+import {Post} from '../models/Post';
 import {Observable} from 'rxjs';
-import {GlobalVariable} from '../../global';
+import {GlobalVariable} from '../global';
 
 const POST_API = `${GlobalVariable.ROOT_URL}api/post/`;
 

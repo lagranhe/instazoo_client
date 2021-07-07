@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {AuthApi} from '../api-client/auth.api';
+import {AuthApi} from '../../api-client/auth.api';
 import {TokenStorageService} from '../../service/token-storage.service';
 import {Router} from '@angular/router';
 import {NotificationService} from '../../service/notification.service';

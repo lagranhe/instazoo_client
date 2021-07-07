@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Post} from '../../models/Post';
-import {PostApi} from '../../auth/api-client/post.api';
-import {ImageUploadApi} from '../../auth/api-client/image-upload.api';
-import {CommentApi} from '../../auth/api-client/comment.api';
+import {PostApi} from '../../api-client/post.api';
+import {ImageUploadApi} from '../../api-client/image-upload.api';
+import {CommentApi} from '../../api-client/comment.api';
 import {NotificationService} from '../../service/notification.service';
 
 @Component({
