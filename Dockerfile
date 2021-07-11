@@ -8,3 +8,4 @@ RUN npm run build --prod
 ### STAGE 2: Run ###
 FROM nginx:alpine
 COPY --from=node /instazoo-client-app/dist/client /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
